@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="\styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<body>
+<!-- <style>
+    section .mySlides  
+    {
+                position: absolute;
+                width: 300px;
+                bottom: 0;
+                right: 25%;
+                left: 25%;
+    }
+</style> -->
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="/home" class="w3-button w3-bar-item">Home</a>
+  <a href="/logout"  class="w3-button w3-bar-item">Logout</a >
+  <!-- <a href="#Reports" class="w3-button w3-bar-item">Reports</a>
+  <a href="#Alerts" class="w3-button w3-bar-item">Alerts</a> -->
+</nav>
+
+<!-- Slide Show -->
+<!-- <section>
+  <img class="mySlides" src="/c1.png"
+  style="width:50%" height="50%" >
+  <img class="mySlides" src="/c2.png"
+  style="width:50%" height="50%" >
+  <img class="mySlides" src="/c3.png"
+  style="width:50%" height="50%">
+</section> -->
+
+<!-- Band Description -->
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+  <h2 class="w3-wide">DT Engineering NW Ltd</h2>
+  <p class="w3-opacity"><i>DT Smart-Acess Portal</i></p>
+
+</section>
+
+<!-- Band Members -->
+<section class="w3-row-padding w3-center w3-light-grey">
+  <article class="w3-third">
+   <p><b>Checklists</b></p>
+    <a href="/checklist">
+    <img src="/checklist1.png"  alt="Random Name" style="width:40%"></a>
+    <p>Build and edit a wide range of checklists.</p>
+  </article>
+  <article class="w3-third">
+    <p><b>Machines</b></p>
+    <a href="/machines">
+    <img src="/m.png" alt="Random Name" style="width:40%"></a>
+    <p>Establish a machine database and edit machine details.</p>
+  </article>
+  <article class="w3-third">
+    <p><b>Reports</b></p>
+    <a href="/reports">
+    <img src="/r.png" alt="Random Name" style="width:40%"></a>
+    <p>View analytics for a wide array of data.</p>
+  </article>
+  <article class="w3-third">
+    <p><b>Sessions</b></p>
+    <a href="/sessions">
+    <img src="/s.png" alt="Random Name" style="width:40%"></a>
+    <p>View the status of all in progress checklists.</p>
+  </article>
+  <article class="w3-third">
+    <p><b>Users</b></p>
+    <a href="/users">
+    <img src="/u.png" alt="Random Name" style="width:40%"></a>
+    <p>See all the users in the sysytem, add new users or edit profiles.</p>
+  </article>
+  <article class="w3-third">
+   <p> <b>Alerts</b></p>
+    <a href="/alerts">
+    <img src="/alert1.png" size="50%" alt="Random Name" style="width:40%"></a>
+    <p>Keep track of all alerts in real time.</p>
+  </article>
+</section>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <p class="w3-medium">
+  Powered by <a href="https://dtengineering.org.uk/" target="_blank">DT Engineering NW Ltd</a>
+  </p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <style>
+        :root {
+    --accent: #04da97;
+    --border-width: 6px;
+    --border-radius: 55px;
+    --font-size: 30px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color:whitesmoke;
+    background: url(./dacsa.png);
+    font-family: sans-serif;
+}
+
+.container {
+    perspective: 800px;
+}
+
+.btn1{
+    align-items: center;
+}
+.toggle {
+    position: relative;
+    border: solid var(--border-width) var(--accent);
+    border-radius: var(--border-radius);
+    transition: transform cubic-bezier(0, 0, 0.30, 2) .4s;
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+
+.toggle>input[type="radio"] {
+    display: none;
+}
+
+.toggle>#choice1:checked~#flap {
+    transform: rotateY(-180deg);
+}
+
+.toggle>#choice1:checked~#flap>.content {
+    transform: rotateY(-180deg);
+}
+
+.toggle>#choice2:checked~#flap {
+    transform: rotateY(0deg);
+}
+
+.toggle>label {
+    display: inline-block;
+    min-width: 170px;
+    padding: 30px;
+    font-size: var(--font-size);
+    text-align: center;
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.toggle>label,
+.toggle>#flap {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+h1{
+    color: #000000;
+}
+
+.toggle>#flap {
+    position: absolute;
+    top: calc( 0px - var(--border-width));
+    left: 50%;
+    height: calc(100% + var(--border-width) * 2);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size);
+    background-color: var(--accent);
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) .5s;
+}
+
+.toggle>#flap>.content {
+    color: #333;
+    transition: transform 0s linear .25s;
+    transform-style: preserve-3d;
+}
+</style>
+    
+<form action="checkbox" method="POST">
+
+<div id="button1" class="login-form" align="center" style="display: block;" onclick="document.getElementById('button2').style.display = 'block'; this.style.display='none'">
+    <label><h1><b>Has a positive metal detector test been completed?</b></h1></label>
+    <!-- <select id="ctype" name="check"> -->
+        <input type="checkbox" name="check" value="YES" type="button" ><b>YES</b></input>
+        <input type="checkbox" name="check" value="NO" type="button" ><b>NO</b></input>
+
+</div>
+
+<div id="button2" class="login-form" align="center" style="display: none;" onclick="document.getElementById('button3').style.display = 'block'; this.style.display='none'">
+    <label><h1><b>Is the metal detector reject chute operational?</b></h1></label>
+    <!-- <select id="ctype" name="check"> -->
+        <input type="checkbox" name="check" value="YES" type="button"><b>YES</b></input>
+        <input type="checkbox" name="check" value="NO" type="button" ><b>NO</b></input>
+  
+
+</div>
+
+<div  id="button3" class="login-form" align="center" style="display: none;" onclick="document.getElementById('button4').style.display = 'block'; this.style.display='none'">
+    <label><h1><b> Is the metal detector housing free from debris and buildups (product, dust, evidence of blue conveyor)?</b></h1></label>
+    <!-- <select id="ctype" name="check"> -->
+        <input type="checkbox" name="check" value="YES" type="button"><b>YES</b></input>
+        <input type="checkbox" name="check" value="NO" type="button" ><b>NO</b></input>
+   
+
+</div>
+
+<div id="button4" class="login-form" align="center" style="display: none;" onclick="document.getElementById('button5').style.display = 'block'; this.style.display='none'">
+    <label><h1><b> Are the conveyor sensors (x4) operational?</b></h1></label>
+    <!-- <select id="ctype" name="check"> -->
+        <input type="checkbox" name="check" value="YES" type="button"><b>YES</b></input>
+        <input type="checkbox" name="check" value="NO" type="button" ><b>NO</b></input>
+ </div>
+
+ <div  id="button5" class="login-form" align="center" style="display: none;" onclick="document.getElementById('button6').style.display = 'block'; this.style.display='none'">
+    <label><h1><b>Is the conveyor clear of product and suitable for use?</h1></b></label>
+    <!-- <select id="ctype" name="check"> -->
+        <input type="checkbox" name="check" value="YES" type="button"><b>YES</b></input>
+        <input type="checkbox" name="check" value="NO" type="button" ><b>NO</b></input>
+ </div>
+
+ <div id="button6" class="login-form" align="center" style="display: none;" onclick="document.getElementById('button1').style.display = 'block';
+ document.getElementById('button2').style.display = 'block';
+ document.getElementById('button3').style.display = 'block';
+ document.getElementById('button4').style.display = 'block';
+ document.getElementById('button5').style.display = 'block';
+ document.getElementById('button6').style.display = 'block';
+ document.getElementById('button7').style.display = 'block';"
+
+ >
+    <label><h1><b>Is the outlet grill clean and free of product and/or foreign matter?</b></h1></label>
+    <!-- <select id="ctype" name="check"> -->
+        <input type="checkbox" name="check" value="YES" type="button"><b>YES</b></input>
+        <input type="checkbox" name="check" value="NO" type="button" ><b>NO</b></input>
+ </div>
+
+</div>
+</div>
+
+<div id="button7" style="display: none;" class="btn1">
+    <button type="submit" align="center">SUBMIT</button>
+</div>
+
+
+</form>
+</body>
